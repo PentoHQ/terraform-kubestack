@@ -140,7 +140,7 @@ variable "cloud_nat_ip_allocate_option" {
 }
 
 variable "cloud_nat_ips" {
-  type        = list[string]
+  type        = list(string)
   description = "The ip self links if ip allocation option is MANUAL_ONLY"
 }
 
