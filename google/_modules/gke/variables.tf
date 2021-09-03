@@ -134,6 +134,16 @@ variable "cloud_nat_min_ports_per_vm" {
   description = "The min amount of ports per VM allowed for NAT mapping"
 }
 
+variable "cloud_nat_ip_allocate_option" {
+  type        = string
+  description = "The ip allocation method, can be AUTO_ONLY or MANUAL_ONLY"
+}
+
+variable "cloud_nat_ips" {
+  type        = list[string]
+  description = "The ip self links if ip allocation option is MANUAL_ONLY"
+}
+
 variable "disable_workload_identity" {
   description = "Wheter to disable workload identity support."
   type        = bool
